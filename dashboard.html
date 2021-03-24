@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="dashboard.css"/> 
+    <link rel="stylesheet" href="progress.css"/> 
+    <link rel="stylesheet" href="rangeSlider.css"/> 
+    <script src="https://use.fontawesome.com/65eac234cb.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+        <!-- side navigation starts here -->
+            <div class="col-sm-1 col-12">
+              <nav id="sideNav">
+                    <ul class="list-group" id="topIcons">
+                        <li class="list-group-item">
+                            <img src="butterfly.PNG" id="logo" /> 
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-search"></i>
+                        </li>
+                    </ul>
+                    <ul class="list-group" id="middleIcons">
+                        <li class="list-group-item">
+                            <i class="fa fa-home"></i> 
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-list-alt" aria-hidden="true"></i>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                    <ul class="list-group" id="bottomIcons">
+                        <li class="list-group-item">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-share-square-o" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+              </nav>
+            </div>
+            <nav id="mobileNav">
+                <ul id="mobileIcons">
+                    <li>
+                        <i class="fa fa-home"></i> 
+                    </li>
+                    <li>
+                        <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-search"></i>
+                    </li>
+                </ul>
+          </nav>
+        <!-- side navigation ends here -->
+            <div class="col-sm-3" id="mainContent">
+               <div class="row">
+                   <div class="col-sm-3 col-3">
+                       <img src="images.jpg" id="profile">
+                   </div>
+                   <div class="col-sm-9 col-9">
+                      <div id="mike"><b>Hi Mike,</b></div>
+                      <div id="welcome">welcome back</div>
+                   </div>
+                   <div class="card">
+                        <div class="card-body">
+                            <div class="topCard">Today</div>
+                            <div class="topCard"><span id="balance">$19,892 </span><br><span class="priceDes text-muted">Account Balance</span></div>
+                            <div class="row">
+                                <div class="col-6 col-sm-12" >
+                                    <div class="topCard"><span class="price">$4000</span><br><span class="priceDes text-muted">Year-to-Date Contribution</span></div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="topCard"><span class="price">$1,892</span><br><span class="priceDes text-muted">Total Interest</span></div>
+                                </div>
+                            </div>
+                            <div class="topCard"><button type="button" class="btn">I want to</button></div>
+                        </div>
+                    </div>
+                    <div class="card cardDown">
+                        <div class="card-body">
+                            <div class="bottomCard">Recent Transaction</div><br>
+                            <div><span class="date text-muted">2020-08-07</span><br><span class="transferBank">Withdraw Transfer to Bank-xxx11</span></div>
+                            <hr>
+                            <div><span class="date text-muted">2020-07-21</span><br><span class="transferBank">Withdraw Transfer to Bank-xxx11</span></div>
+                            <hr>
+                            <div><span class="date text-muted">2020-07-16</span><br><span class="transferBank">Withdraw Transfer to Bank-xxx11</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5" id="columnThree">
+                <div><span id="retireIncome">Retirement Income</span><br><span id="startingYear"><h5>Starting Year 2056</h5></span></div>
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <div><span id="goal">$300,000</span><br><span class="goalSummary text-muted">My Goal</span><hr id="horizontalLine"></div>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <div><span id="goal">59%</span><br><span class="goalSummary text-muted">Goal Achieved</span><hr id="horizontalLine"></div>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <div><span id="goal">$300</span><br><span class="goalSummary text-muted">Est. Monthly Income</span><hr id="horizontalLine"></div>
+                    </div>
+                </div>
+                <div id="contribution"><h6>Contributions Overtime</h6></div>
+                <div id="chart"></div>
+                <div id="peers"><b>How do I compare to my peers?</b><br><span class="text-muted" style="font-size: 12px;">These numbers represent current goal achievement</span></div><br>
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <div class="ringSummary"><b>Age</b>: Under 30</div>
+                        <hr>
+                        <div class="ringSummary"><b>Salary</b>: k 20-k 30</div>
+                        <hr>
+                        <div class="ringSummary"><b>Gender</b>: Male</div>
+                    </div>
+                    <div class="col-12 col-sm-8">
+                       <div class="row">
+                           <div class="col-4 col-sm-4">
+                             <section>
+                                <svg class="progressbar" id="progressbar" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+                                  <circle class="progressbar__path" cx="60" cy="60" r="38"></circle>
+                                  <circle class="progressbar__fill" cx="60" cy="60" r="38"></circle>
+                                  <g>
+                                    <text class="progressbar__title" x="50%" y="50%"></text>
+                                  </g>
+                                </svg>
+                                <span class="progress_caption" id="progress_caption">Average</span>
+                             </section>
+                             
+                           </div>
+                           <div class="col-4 col-sm-4">
+                             <section>
+                                <svg class="progressbar" id="progressbar_two" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+                                  <circle class="progressbar__path" cx="60" cy="60" r="38"></circle>
+                                  <circle class="progressbar__fill" cx="60" cy="60" r="38"></circle>
+                                  <g>
+                                    <text class="progressbar__title" x="50%" y="50%"></text>
+                                  </g>
+                                </svg>
+                                <span class="progress_caption1">Top</span>
+                              </section>
+                           </div>
+                           <div class="col-4 col-sm-4">
+                              <section>
+                                <svg class="progressbar" id="progressbar_three" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+                                  <circle class="progressbar__path" cx="60" cy="60" r="38"></circle>
+                                  <circle class="progressbar__fill" cx="60" cy="60" r="38"></circle>
+                                  <g>
+                                    <text class="progressbar__title" x="50%" y="50%"></text>
+                                  </g>
+                                </svg>
+                                <span class="progress_caption2">Me</span>
+                              </section>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+           <div class="col-sm-3 col-12" id="columnFour">
+               <div class="card lastCard" style="width:15rem">
+                   <div class="card-body">
+                       <h6><b>Retirement Strategy</b></h6>
+                       <div class="range-slider">
+                            <h6 class="range-caption">Employee Contribution</h6>
+                            <input class="range-slider__range" type="range" value="12" min="0" max="15">
+                            <span><b>12%</b></span>
+                       </div>
+                       <div class="range-slider">
+                            <h6 class="range-caption">Retirement Age</h6>
+                            <input class="range-slider__range" type="range" value="65" min="0" max="70">
+                            <span><b>65</b></span>
+                      </div>
+                      <hr>
+                      <div class="row">
+                          <div class="col-6 col-sm-9 sideCard">Employee Contribution</div>
+                          <div class="col-6 col-sm-3 sideCard">8.4%</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 col-sm-9 sideCard" id="sideCard">Interest Rate</div>
+                        <div class="col-6 col-sm-3 sideCard">5%</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12"><button id="update">Update</button></div><br>
+                        <div id="help">View Help Docs ></div>
+                      </div>
+                   </div> 
+               </div><br>
+               <div class="row" id="lastContent">
+                   <div class="col-1 col-sm-1">
+                       <div id="verticle"></div>
+                   </div>
+                   <div class="col-10 col-sm-10">
+                       <span>Are you considering a</span>
+                       <h6><b>Housing Advance ?</b></h6>
+                       <span class="text-muted">Limited time reduced interest</span><br>
+                       <span style="color:#6600cc" ><b>Learn more ></b></span>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+  
+   
+</body>
+</html>

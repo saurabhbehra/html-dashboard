@@ -1,0 +1,203 @@
+:root {
+    --white:#FDFEFE;
+    --grey:#EBEDEF;
+    --blue:#0000FF;
+    --purple:#6600cc;
+
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-color: var(--grey);
+  }
+
+#sideNav{
+    top:0px;
+    position: fixed;
+    display: block;
+    left: 10px;
+    width: 60px;
+    height: 100%;
+    background:var(--white);
+    z-index:500;
+    border-top-left-radius:25px;
+    border-bottom-left-radius:25px;
+}
+#sideNav #topIcons{
+   margin-top: 16px; 
+}
+
+#sideNav>ul>li{
+    list-style-type: none;
+    border:none;
+}
+
+#sideNav>ul>li>i{
+    margin-left: 3px;
+}
+
+#sideNav #middleIcons{
+    margin-top: 1.2rem;
+}
+#sideNav #bottomIcons{
+    margin-top:13rem;
+}
+
+
+#mainContent{
+    margin-top:2rem;
+}
+
+#profile{
+    width:60px;
+    height:60px;
+    border-radius: 100%;
+}
+
+#mike{
+    margin-top:4px;
+    font-size: 1.2rem;
+}
+#welcome{
+    font-size:0.6rem;
+}
+
+.price ,.transferBank,.bottomCard,.topCard{
+    font-weight: bold;
+}
+
+#balance{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.priceDes{
+    font-size: x-small;
+}
+.topCard{
+    padding-bottom: 8px;
+}
+.btn{
+    width: 50%;
+    height: 28%;
+    background-color: var(--purple);
+    border-color: var(--purple);
+    color:var(--white);
+    border-radius: 5px;
+}
+
+.card{
+    border:none;
+    background-color: var(--grey);
+   
+}
+.bottomCard{
+    margin-top: -20px;
+}
+.transferBank,.date{
+    font-size: 0.8rem;
+}
+#columnThree,#columnFour{
+    background-color: var(--white);
+    padding-top: 2rem;
+}
+#retireIncome{
+    color: var(--purple);
+    font-weight: bold;
+}
+#startingYear{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+#goal{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#horizontalLine{
+    border-top:1px solid var(--blue);
+    margin: 2px 0 40px 0;
+}
+.goalSummary{
+    font-size:0.7rem;
+}
+#lastCard{
+    margin-right:10px;
+}
+.range-caption{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+#verticle{
+    height: 8rem;
+    width:2px;
+    background-color: var(--purple);
+}
+
+.sideCard{
+    font-weight: bold;
+    padding-top: 2px;
+    font-size: 0.75rem;
+}
+#sideCard{
+    margin-top: 10px;
+}
+#update{
+    width:80%;
+    height: 70%;
+    border-radius: 6px;
+    padding:0 0 2px 0;
+    margin: 15px 0 5px 20px;
+    background-color: var(--purple);
+    border-color:var(--purple);
+    color:var(--white)
+}
+
+#help{
+    margin-right: auto;
+    margin-left:auto;
+    margin-top:10px;
+    color:var(--purple);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: var(--white);
+    }
+    #sideNav{
+      visibility:hidden;
+    }
+    #mobileNav li{
+       display: inline;
+       padding: 15px;
+    }
+    #mobileNav{
+       background-color: var(--white);
+       padding-top: 10px;
+       width: 100%;
+       margin-top:30rem;
+       position:fixed;
+       z-index:1000;
+       overflow: hidden;
+    }
+    .card{
+        margin-top: 1.5rem;
+        width:90%;
+        background-color: var(--grey);
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+    .bottomCard{
+        padding-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #mobileNav{
+        visibility: hidden;
+    }
+}

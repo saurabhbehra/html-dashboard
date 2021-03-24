@@ -1,0 +1,45 @@
+:root{
+    --green:#0BF3A2;
+    --light:#D8FEF1;
+}
+
+ 
+.progressbar__path {
+   fill: transparent;
+   stroke: var(--light);
+   stroke-width: 6;
+ }
+ .progressbar__fill {
+   transition: stroke-dashoffset 1s;
+   transform: rotate(-90deg);
+   transform-origin: center;
+   fill: transparent;
+   stroke: var(--green);
+   stroke-dasharray: 0;
+   stroke-dashoffset: 0;
+   stroke-linecap: round;
+   stroke-width: 6;
+ }
+ .progressbar__title {
+   font-size: 18px;
+   alignment-baseline: central;
+   text-anchor: middle;
+   font-weight: bold;
+ }
+ .progressbar{
+    position: relative;
+    z-index: 10;
+ }
+ #progress_caption{
+   position: relative;
+   z-index: 119;
+   margin-left: 2rem;
+   margin-top: -7rem;
+ 
+}
+.progress_caption1{
+   margin-left: 2.8rem;
+}
+.progress_caption2{
+   margin-left: 2.7rem;
+}
