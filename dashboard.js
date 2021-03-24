@@ -52,16 +52,16 @@ function setProgressbarFill(elem, value) {
 
 //bar graph
 var options = {
-  colors : ['#4d3a96', '#8000ff','#4576b5'],
+  colors : ['#4d3a96', '#8000ff','#AED6F1'],
   series: [{
     name: 'Employer: K 73,500',
-    data: [5,6,7,8,9,10,11,12,13,14,15,16,17]
+    data: [10,12,14,16,18,20,22,24,26,28,30,32,34]
   }, {
     name: 'Employer K 52,500',
-    data: [5,6,7,8,9,10,11,12,13,14,15,16,17]
+    data: [10,12,14,16,18,20,22,24,26,28,30,32,34]
   }, {
     name: 'Total Interest: K 244,313',
-    data:[5,6,7,8,9,10,11,12,13,14,15,16,17]
+    data:[10,12,14,16,18,20,22,24,26,28,30,32,34]
   }],
   chart: {
     type: 'bar',
@@ -99,13 +99,7 @@ var options = {
     categories: [20,25,30,35,40,60,65
     ],
   },
-  yaxis:{
-	tickAmount:10,
-	min:0,
-	max:100,
-	forceNiceScale: true,
-	show: true,
-  },
+
   legend: {
     show :true,
     position: 'top',
@@ -140,11 +134,9 @@ const settings={
   // First find all our sliders
   const sliders = document.querySelectorAll('.range-slider');
   
-  // Iterate through that list of sliders
-  // ... this call goes through our array of sliders [slider1,slider2,slider3] and inserts them one-by-one into the code block below with the variable name (slider). We can then access each of wthem by calling slider
+ 
   Array.prototype.forEach.call(sliders,(slider)=>{
-	// Look inside our slider for our input add an event listener
-  //   ... the input inside addEventListener() is looking for the input action, we could change it to something like change
+
 	slider.querySelector('input').addEventListener('input', (event)=>{
 	  // 1. apply our value to the span
 	  slider.querySelector('span').innerHTML = event.target.value;
@@ -159,8 +151,7 @@ const settings={
   function applyFill(slider) {
 	// Let's turn our value into a percentage to figure out how far it is in between the min and max of our input
 	const percentage = 100*(slider.value-slider.min)/(slider.max-slider.min);
-	// now we'll create a linear gradient that separates at the above point
-	// Our background color will change here
+
 	const bg = `linear-gradient(90deg, ${settings.fill} ${percentage}%, ${settings.background} ${percentage+0.1}%)`;
 	slider.style.background = bg;
   }

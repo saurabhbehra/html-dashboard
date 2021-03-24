@@ -1,6 +1,6 @@
 :root {
     --white:#FDFEFE;
-    --grey:#EBEDEF;
+    --grey:#F3F4F5;
     --blue:#0000FF;
     --purple:#6600cc;
 
@@ -170,6 +170,10 @@ body{
     padding:2px 2px 2px 7px;
     border-radius: 5px;
 }
+
+ 
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     body{
@@ -202,9 +206,6 @@ body{
     .progressbar{
         margin-left: -1rem;
     }
-    .progress_caption{
-       margin-left: -2rem;
-    }
     .lastCard{
         width:20rem;
     }
@@ -216,10 +217,21 @@ body{
         padding:2px 2px 2px 7px;
         border-radius: 5px;
     }
+    .btn{
+        width: 80%;
+        margin-left: 1rem;
+    }
+    .bell{
+        margin-top: -1rem;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
     #mobileNav{
         visibility: hidden;
+    }
+    .bell{
+      display: none;
     }
 }
