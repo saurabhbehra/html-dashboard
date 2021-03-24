@@ -121,8 +121,9 @@ body{
 .goalSummary{
     font-size:0.7rem;
 }
-#lastCard{
-    margin-right:10px;
+.lastCard{
+    /* margin-right:10px; */
+    width:15rem;
 }
 .range-caption{
     font-size: 0.8rem;
@@ -161,7 +162,14 @@ body{
     font-weight: bold;
     font-size: 0.8rem;
 }
-
+.active{
+    height: 30px;
+    width: 30px;
+    background-color: var(--purple);
+    color:var(--white);
+    padding:2px 2px 2px 7px;
+    border-radius: 5px;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     body{
@@ -170,15 +178,12 @@ body{
     #sideNav{
       visibility:hidden;
     }
-    #mobileNav li{
-       display: inline;
-       padding: 15px;
-    }
     #mobileNav{
        background-color: var(--white);
-       padding-top: 10px;
        width: 100%;
-       margin-top:30rem;
+       height: 10%;
+       padding-top:15px;
+       margin-top:35.5rem;
        position:fixed;
        z-index:1000;
        overflow: hidden;
@@ -193,6 +198,23 @@ body{
     }
     .bottomCard{
         padding-top: 1rem;
+    }
+    .progressbar{
+        margin-left: -1rem;
+    }
+    .progress_caption{
+       margin-left: -2rem;
+    }
+    .lastCard{
+        width:20rem;
+    }
+    .active{
+        height: 30px;
+        width: 30px;
+        background-color: var(--purple);
+        color:var(--white);
+        padding:2px 2px 2px 7px;
+        border-radius: 5px;
     }
 }
 

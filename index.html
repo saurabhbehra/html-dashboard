@@ -29,7 +29,7 @@
                     </ul>
                     <ul class="list-group" id="middleIcons">
                         <li class="list-group-item">
-                            <i class="fa fa-home"></i> 
+                           <div class="active"><i class="fa fa-home"></i> </div> 
                         </li>
                         <li class="list-group-item">
                             <i class="fa fa-address-card-o" aria-hidden="true"></i>
@@ -51,23 +51,15 @@
                     </ul>
               </nav>
               <nav id="mobileNav">
-                <ul id="mobileIcons">
-                    <li>
-                        <i class="fa fa-home"></i> 
-                    </li>
-                    <li>
-                        <i class="fa fa-address-card-o" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                        <i class="fa fa-list-alt" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                        <i class="fa fa-user-o" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                        <i class="fa fa-search"></i>
-                    </li>
-                </ul>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-2"> <div class="active"> <i class="fa fa-home"></i> </div></div>
+                    <div class="col-2"> <i class="fa fa-address-card-o" aria-hidden="true"></i></div>
+                    <div class="col-2"> <i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                    <div class="col-2"> <i class="fa fa-user-o" aria-hidden="true"></i></div>
+                    <div class="col-2"> <i class="fa fa-search"></i></div>
+                    <div class="col-1"></div>
+                </div>
              </nav>
             </div>
           
@@ -176,7 +168,7 @@
                 </div>
             </div>
            <div class="col-sm-3 col-12" id="columnFour">
-               <div class="card lastCard" style="width:15rem">
+               <div class="card lastCard">
                    <div class="card-body">
                        <h6><b>Retirement Strategy</b></h6>
                        <div class="range-slider">
